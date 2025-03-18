@@ -1,0 +1,26 @@
+\usepackage{natbib}
+\usepackage{aas_macros}
+\usepackage{hyperref}
+\usepackage{etoolbox}
+\usepackage{paralist}  % Required for the inparaneum environment.
+
+\renewenvironment{thebibliography}[1]{%
+    \section*{\refname}  % This line makes the "References" heading.
+    \let\par\relax\let\newblock\relax % Makes the elements of the bibliography not be separated by a blank line.
+    \inparaenum % See paralist package documentation.
+  }
+  {
+    \endinparaenum 
+  }
+
+%
+% This makes the citation divider be a bullet.
+%
+\makeatletter
+\def\NAT@anchor#1#2{%
+ \hfilneg\hyper@natanchorstart{#1\@extra@b@citeb}%
+ \textbullet  %  This is the item marker.
+ \hyper@natanchorend
+}%
+\makeatother
+
