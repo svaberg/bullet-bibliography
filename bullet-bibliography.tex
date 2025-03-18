@@ -1,19 +1,19 @@
 \documentclass{article} 
-
-
 \usepackage{bullet-bibliography}
 
 \begin{document}
 
 \section*{Bullet bibliography style}
 
-The bullet bibliography style is based on 
-{\tt natbib}, 
-the {\tt aas\_macros}, 
-and the Monthly Notices {\tt .bst} file {\tt mnras.bst}.
+The bullet bibliography style is based on {\tt natbib}, the {\tt aas\_macros}, and the Monthly Notices {\tt .bst} file {\tt mnras.bst}. The latter file is  changed in a single line, to set {\tt maxauthors=1} in the bibliography. I think there is no other way to set this parameter. 
+
+Below is an example of how to use the bullet bibliography style. Please star the repository if you find it useful.
+
+\section*{Top ten papers}
 
 These are the top ten papers by citation count in the NASA ADS: \citet{1973A&A....24..337S,1998ApJ...500..525S,1998AJ....116.1009R,2016A&A...594A..13P,2020A&A...641A...6P,1999ApJ...517..565P,1981PhRvB..23.5048P,2005Natur.438..197N,2013A&A...558A..33A,2016PhRvL.116f1102A}
 
+\subsection*{Result}
 Below you can see how the resulting bibliography looks.
 
 \bibliographystyle{bullet-bibliography}
