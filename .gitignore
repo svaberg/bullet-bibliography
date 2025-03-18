@@ -4,3 +4,10 @@
 *.log
 *.out
 *.bbl
+*.fdb_latexmk
+*.fls
+
+*.pdf
+*.ps
+*.dvi
+*.synctex.gz
