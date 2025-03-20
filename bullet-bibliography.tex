@@ -1,20 +1,36 @@
 \documentclass{article} 
+\usepackage{natbib}
+\usepackage{aas_macros}
 \usepackage{bullet-bibliography}
 
 \begin{document}
 
 \section*{Bullet bibliography style}
 
-The bullet bibliography style is based on {\tt natbib}, the {\tt aas\_macros}, and the Monthly Notices {\tt .bst} file {\tt mnras.bst}. The latter file is  changed in a single line, to set {\tt maxauthors=1} in the bibliography. I think there is no other way to set this parameter. 
+The bullet bibliography style for \LaTeX{}, available at \url{https://github.com/svaberg/bullet-bibliography}, produces compact bibliographies without line- or paragraph breaks between references. The compact bibliography section is useful for proposals and other documents where space is at a premium.
 
-Below is an example of how to use the bullet bibliography style. Please star the repository if you find it useful.
+The bullet bibliography style is based on 
+{\tt natbib} package style, 
+the {\tt aas\_macros}\footnote{
+    The {\tt aas\_macros.sty} file is available from \url{https://ui.adsabs.harvard.edu/help/actions/journal-macros}.
+}
+style file which defines journal macros used by NASA ADS, 
+and 
+the Monthly Notices bibliography style {\tt mnras.bst}\footnote{
+    This bibliography style is part of the {\tt mnras} package available at \url{https://ctan.org/pkg/mnras}.
+}. The latter file is changed to set {\tt maxauthors=1} in the bibliography for increased compactness and may be omitted by changing the 
+\verb|\bibliographystyle{bullet-bibliography}| 
+line to utilise a regular bibliography style.
 
-\section*{Top ten papers}
+Below is an example of how to use the bullet bibliography style. 
+
+\subsection*{Top ten papers}
 
 These are the top ten papers by citation count in the NASA ADS: \citet{1973A&A....24..337S,1998ApJ...500..525S,1998AJ....116.1009R,2016A&A...594A..13P,2020A&A...641A...6P,1999ApJ...517..565P,1981PhRvB..23.5048P,2005Natur.438..197N,2013A&A...558A..33A,2016PhRvL.116f1102A}
 
 \subsection*{Result}
-Below you can see how the resulting bibliography looks.
+Below you can see how the resulting bibliography looks. Please star the repository if you find it useful.
+
 
 \bibliographystyle{bullet-bibliography}
 \bibliography{topten}
